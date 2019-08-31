@@ -1,0 +1,2 @@
+# LiveEventBus
+基于LiveData设计思想而设计的一款Android消息总线
