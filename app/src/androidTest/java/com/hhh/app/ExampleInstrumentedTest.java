@@ -1,4 +1,4 @@
-package com.hhh.liveeventbus;
+package com.hhh.app;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;

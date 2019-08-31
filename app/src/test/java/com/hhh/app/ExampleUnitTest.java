@@ -1,4 +1,4 @@
-package com.hhh.liveeventbus;
+package com.hhh.app;
 
 import org.junit.Test;
 
