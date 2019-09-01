@@ -11,6 +11,17 @@
 - [x] 支持AndroidX
 - [x] 非Forever模式只在激活态可以收到消息，避免用户反复操作引起的无用消息导致界面卡顿
 
+## 在工程中引用
+Via Gradle:
+
+```
+implementation 'com.hhh.onepiece:live-event-bus:0.0.2'
+```
+For AndroidX:
+```
+implementation 'com.hhh.onepiece:live-event-bus-x:0.0.2'
+```
+
 ## 实现原理
 - 受LiveData设计思想启发而设计
 
