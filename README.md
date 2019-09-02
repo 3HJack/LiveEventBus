@@ -12,8 +12,21 @@
 - [x] 非Forever模式只在激活态可以收到消息，避免用户反复操作引起的无用消息导致界面卡顿
 
 ## 在工程中引用
-Via Gradle:
 
+Via Gradle: 在项目根目录的build.gradle的如下位置添加 <br><br>
+maven { url "https://dl.bintray.com/onepiece/maven" }
+
+```
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://dl.bintray.com/onepiece/maven" }
+    }
+}
+```
+
+For Pre-AndroidX
 ```
 implementation 'com.hhh.onepiece:live-event-bus:0.0.2'
 ```
