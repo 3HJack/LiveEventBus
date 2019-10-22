@@ -19,25 +19,25 @@ public class MainActivity extends AppCompatActivity {
   }
 
   private void testSendEvent() {
-    findViewById(R.id.post).setOnClickListener(view -> LiveEventBus.getInstance()
+    findViewById(R.id.post).setOnClickListener(view -> LiveEventBus.getDefault()
         .with(TestEvent.class).post(new TestEvent("post")));
-    findViewById(R.id.post_delay).setOnClickListener(view -> LiveEventBus.getInstance()
+    findViewById(R.id.post_delay).setOnClickListener(view -> LiveEventBus.getDefault()
         .with(TestEvent.class).postDelay(new TestEvent("postDelay"), 1000L));
-    findViewById(R.id.post_orderly).setOnClickListener(view -> LiveEventBus.getInstance()
+    findViewById(R.id.post_orderly).setOnClickListener(view -> LiveEventBus.getDefault()
         .with(TestEvent.class).postOrderly(new TestEvent("postOrderly")));
   }
 
   private void testAcceptEvent(FragmentActivity activity) {
     findViewById(R.id.observe).setOnClickListener(
-        view -> LiveEventBus.getInstance().with(TestEvent.class).observe(activity,
+        view -> LiveEventBus.getDefault().with(TestEvent.class).observe(activity,
             testEvent -> Toast.makeText(activity, testEvent.mEvent, Toast.LENGTH_SHORT).show()));
-    findViewById(R.id.observe_sticky).setOnClickListener(view -> LiveEventBus.getInstance()
+    findViewById(R.id.observe_sticky).setOnClickListener(view -> LiveEventBus.getDefault()
         .with(TestEvent.class).observeSticky(activity, testEvent -> Toast
             .makeText(activity, "stick: " + testEvent.mEvent, Toast.LENGTH_SHORT).show()));
     findViewById(R.id.observe_forever).setOnClickListener(
-        view -> LiveEventBus.getInstance().with(TestEvent.class).observeForever(testEvent -> Toast
+        view -> LiveEventBus.getDefault().with(TestEvent.class).observeForever(testEvent -> Toast
             .makeText(activity, "forever: " + testEvent.mEvent, Toast.LENGTH_SHORT).show()));
-    findViewById(R.id.observe_sticky_forever).setOnClickListener(view -> LiveEventBus.getInstance()
+    findViewById(R.id.observe_sticky_forever).setOnClickListener(view -> LiveEventBus.getDefault()
         .with(TestEvent.class).observeStickyForever(testEvent -> Toast
             .makeText(activity, "sticky_forever: " + testEvent.mEvent, Toast.LENGTH_SHORT).show()));
   }
