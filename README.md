@@ -28,11 +28,11 @@ allprojects {
 
 For Pre-AndroidX
 ```
-implementation 'com.hhh.onepiece:live-event-bus:0.0.3'
+implementation 'com.hhh.onepiece:live-event-bus:0.0.4'
 ```
 For AndroidX:
 ```
-implementation 'com.hhh.onepiece:live-event-bus-x:0.0.3'
+implementation 'com.hhh.onepiece:live-event-bus-x:0.0.4'
 ```
 
 ## 实现原理

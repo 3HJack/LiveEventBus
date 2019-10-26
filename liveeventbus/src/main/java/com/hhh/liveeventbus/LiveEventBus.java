@@ -10,6 +10,9 @@ import androidx.annotation.NonNull;
 
 public class LiveEventBus {
 
+  // 进程间通信事件的key
+  public static final String KEY_IPC_EVENT_KEY = "ipc_event_key";
+
   private static volatile LiveEventBus DEFAULT_INSTANCE;
 
   private final Map<String, LiveEvent<Object>> mEventMap = new HashMap<>();

@@ -46,7 +46,7 @@ publish {
     userOrg = 'onepiece'
     groupId = 'com.hhh.onepiece'
     artifactId = 'live-event-bus-x'
-    publishVersion = '0.0.3'
+    publishVersion = '0.0.4'
     desc = '基于LiveData设计思想而设计的一款Android消息总线'
     website = 'https://github.com/3HJack/LiveEventBus'
 }
