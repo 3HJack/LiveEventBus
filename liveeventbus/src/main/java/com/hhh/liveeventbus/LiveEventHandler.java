@@ -1,5 +1,6 @@
 package com.hhh.liveeventbus;
 
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.text.TextUtils;
@@ -20,7 +21,9 @@ public class LiveEventHandler extends Handler {
     if (msg.obj != null) {
       key = msg.obj.getClass().getName();
     } else {
-      key = msg.getData().getString(LiveEventBus.KEY_IPC_EVENT_KEY);
+      Bundle data = msg.getData();
+      data.setClassLoader(getClass().getClassLoader());
+      key = data.getString(LiveEventBus.KEY_IPC_EVENT_KEY);
     }
     if (TextUtils.isEmpty(key)) {
       throw new RuntimeException("ipc event key cannot be empty!!!");
