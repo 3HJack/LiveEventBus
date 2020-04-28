@@ -3,10 +3,10 @@ package com.hhh.onepiece;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.hhh.liveeventbus.LiveEventBus;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentActivity;
+
+import com.hhh.liveeventbus.LiveEventBus;
 
 public class MainActivity extends AppCompatActivity {
 
